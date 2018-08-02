@@ -1,0 +1,9 @@
+# Submitter checklist
+
+- [ ] Change is code complete and matches issue description.
+- [ ] Verified that this contribution is something that should be included by default in basic projects.
+
+# Reviewer checklist
+- [ ] Run the changes and verified the change matches the issue description.
+- [ ] Reviewed the code.
+- [ ] Verified that this contribution is something that should be included by default in basic projects.
