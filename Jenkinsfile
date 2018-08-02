@@ -1,19 +1,20 @@
-@Library("com.optum.jenkins.pipeline.library.openshift-core@master") _
+// @Library("enter your enterprise Jenkins library here") _
 
 pipeline {
   agent {
-    label 'docker-oc-go'
+    label 'random-label'
   }
   environment {
-    OPENSHIFT_CREDENTIALS_ID = 'devopseng_tech'
+    HOSTING_CREDENTIALS_ID = 'devops-user' // Your Jenkins pipline credentials name and stored in Jenkins
   }
+  // The stages are based on your enterprise Jenkins library, this is for illustration purposes only ...
   stages {
     stage ('Build and Run Docker Image') {
       steps {
         sh '''
-            . /etc/profile.d/jenkins.sh
+            . /etc/profile.d/jenkins.sh 
           '''
-        glOpenshiftBuildAndRun credentials: "$env.OPENSHIFT_CREDENTIALS_ID", ocpUrl: "https://ocp-ctc-core-nonprod.optum.com", project: 'ccdbclone', serviceName: 'spring', path: '.', port: '8080'
+        glOpenshiftBuildAndRun credentials: "$env.HOSTING_CREDENTIALS_ID", specificUrl: "https://enterprise-paas-hosting-platform", project: 'hosting-platform-project-name', serviceName: 'your-service-name', path: '.', port: '8080'
       }
     }
   }
