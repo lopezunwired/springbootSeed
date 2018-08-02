@@ -1,4 +1,4 @@
-package com.optum;
+package com.your-corp;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

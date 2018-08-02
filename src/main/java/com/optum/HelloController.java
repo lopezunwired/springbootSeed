@@ -1,4 +1,4 @@
-package com.optum;
+package com.your-corp;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
